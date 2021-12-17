@@ -476,10 +476,10 @@ function lengthBytesUTF8(str) {
 var GLOBAL_BASE = 1024,
     TOTAL_STACK = 524288,
     STATIC_BASE = 1024,
-    STACK_BASE = 1911952,
+    STACK_BASE = 1913872,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 1387664
-    , DYNAMICTOP_PTR = 1387488;
+    STACK_MAX = 1389584
+    , DYNAMICTOP_PTR = 1389408;
     ;
 
 
@@ -494,8 +494,8 @@ var buffer = wasmMemory.buffer;
 
 
 var wasmTable = new WebAssembly.Table({
-  'initial': 12347,
-  'maximum': 12347 + 0,
+  'initial': 12384,
+  'maximum': 12384 + 0,
   'element': 'anyfunc'
 });
 
@@ -521,7 +521,7 @@ updateGlobalBufferAndViews(buffer);
 
 
 
-  HEAP32[DYNAMICTOP_PTR>>2] = 1911952;
+  HEAP32[DYNAMICTOP_PTR>>2] = 1913872;
 
 
 
@@ -615,7 +615,7 @@ var memoryInitializer = null;
 // === Body ===
 
 var ASM_CONSTS = {
-  287253: function() {debugger;}
+  288029: function() {debugger;}
 };
 
 function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
@@ -625,7 +625,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
 
 
 
-// STATICTOP = STATIC_BASE + 1386640;
+// STATICTOP = STATIC_BASE + 1388560;
 
 
 
@@ -769,7 +769,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   ;
 
   function _emscripten_get_sbrk_ptr() {
-      return 1387488;
+      return 1389408;
     }
 
   
@@ -4339,7 +4339,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   }
   
   
-  var _fetch_work_queue=1387648;function __emscripten_get_fetch_work_queue() {
+  var _fetch_work_queue=1389568;function __emscripten_get_fetch_work_queue() {
       return _fetch_work_queue;
     }function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
     if (typeof noExitRuntime !== 'undefined') noExitRuntime = true; // If we are the main Emscripten runtime, we should not be closing down.
