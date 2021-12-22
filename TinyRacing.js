@@ -6302,12 +6302,19 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
         } else {
           document.documentElement.appendChild(canvas);
         }
+
+
+        console.log(window.innerWidth);
+        var initialCanvasWidth = window.innerHeight;
+        console.log(initialCanvasWidth);
+        canvas.style.height = initialCanvasWidth + "px";
+        console.log(window.innerWidth);
       }
   
       ut._HTML.canvasElement = canvas;
 
       var rest = (1920 - window.innerWidth)/2;   
-      document.getElementById("UT_CANVAS").style.right = -rest + "px";
+      canvas.style.right = -rest + "px";
 
       ut._HTML.canvasMode = 'bgfx';
   
