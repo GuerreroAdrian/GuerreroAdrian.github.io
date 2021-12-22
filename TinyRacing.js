@@ -6313,7 +6313,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   
       ut._HTML.canvasElement = canvas;
 
-      var rest = (1920 - window.innerWidth)/2;   
+      var rest = window.innerWidth/2;   
       canvas.style.right = -rest + "px";
 
       ut._HTML.canvasMode = 'bgfx';
