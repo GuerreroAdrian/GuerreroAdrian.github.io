@@ -6303,17 +6303,13 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
           document.documentElement.appendChild(canvas);
         }
 
-
-        console.log(window.innerWidth);
-        var initialCanvasWidth = window.innerHeight;
-        console.log(initialCanvasWidth);
+        var initialCanvasWidth = screen.height;
         canvas.style.height = initialCanvasWidth + "px";
-        console.log(window.innerWidth);
       }
   
       ut._HTML.canvasElement = canvas;
 
-      var rest = window.innerWidth/2;   
+      var rest = (screen.width - window.innerWidth)/2;   
       canvas.style.right = -rest + "px";
 
       ut._HTML.canvasMode = 'bgfx';
