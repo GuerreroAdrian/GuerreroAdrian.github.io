@@ -26,7 +26,9 @@
 .navbar{
   background-color: black;
   position: fixed;
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%; 
   z-index: 2;
   padding: 25px 0;
   transition: all 0.3s ease;
