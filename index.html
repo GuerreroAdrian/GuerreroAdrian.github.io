@@ -1,166 +1,23 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal - www.codingnepalweb.com -->
-<html lang="en">
+<html lang="en-us">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Sticky Navigation Bar | CodingNepal</title>
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <style>
-        #cnv{
-          padding: 0;
-          margin: auto;
-          display: block;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-        }
-      </style>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | MapWebGL</title>
   </head>
-  <body>
-      <div id="cnv">
-        <canvas></canvas>
-      </div>
-      <nav class="navbar">
-        <div class="content">
-          <div class="logo">
-            <a href="#">Maki-Studios</a>
-          </div>
-          <ul class="menu-list">
-            <div class="icon cancel-btn">
-              <i class="fas fa-times"></i>
-            </div>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <div class="icon menu-btn">
-            <i class="fas fa-bars"></i>
-          </div>
-        </div>
-      </nav>
-
-      <script>
-        const body = document.querySelector("body");
-        const navbar = document.querySelector(".navbar");
-        const menuBtn = document.querySelector(".menu-btn");
-        const cancelBtn = document.querySelector(".cancel-btn");
-        menuBtn.onclick = ()=>{
-          navbar.classList.add("show");
-          menuBtn.classList.add("hide");
-          body.classList.add("disabled");
-        }
-        cancelBtn.onclick = ()=>{
-          body.classList.remove("disabled");
-          navbar.classList.remove("show");
-          menuBtn.classList.remove("hide");
-        }
-        window.onscroll = ()=>{
-          this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-        }
-      </script>
-      <script type="text/javascript">
-        var ctx = document.querySelector('canvas').getContext('2d'),
-            fpsout = document.querySelector('#fps');
-        var asteroids=[];
-
-        initializeAsteroids();
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas, false);
-        setInterval(drawFrame, 1000 / 60);
-
-        function resizeCanvas() {
-            var w = document.getElementById('cnv').offsetWidth,
-                h = document.getElementById('cnv').offsetHeight;
-            ctx.canvas.width  = w;
-            ctx.canvas.height = h;
-            ctx.translate(w/2,h/2);
-            ctx.strokeStyle = 'red';
-            ctx.fillStyle = 'black';
-            drawFrame();
-        }
-
-        function initializeAsteroids() {
-            for (var i = 0; i < 100; ++i) {
-                asteroids.push({
-                    size: Math.random() * 30 + 10,
-                    x: Math.random() * 2000 - 1000,
-                    y: Math.random() * 2000 - 1000,
-                    vx: Math.random() * 50 - 25,
-                    vy: Math.random() * 50 - 25,
-                    angle: Math.random() * 90,
-                    speed: Math.random() * 70 + 20,
-                    dir: Math.round(Math.random())*2 - 1
-                });
-            }
-        }
-
-        var lastUpdate = new Date, fps=30;
-
-        function drawFrame() {
-            var now = new Date;
-            var dt = (now - lastUpdate) / 1000;
-            if (dt==0 || isNaN(dt)) return;
-                
-            ctx.save();
-            ctx.setTransform(1,0,0,1,0,0);
-            ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
-            ctx.restore();
-            
-            drawAsteroids();    
-            drawShip();
-            moveAsteroids(dt);
-
-            lastUpdate = now;
-            fps += (1/dt - fps) / 10;
-        }
-
-        function drawAsteroids(){
-            for (var i=0,len=asteroids.length; i<len; ++i){
-                var a = asteroids[i], size = a.size;
-                ctx.save();
-                ctx.translate(a.x - size, a.y - size);
-                ctx.rotate(a.angle);
-                ctx.strokeRect(-size, -size, size*2, size*2);
-                ctx.restore();
-            }
-        }
-
-        function moveAsteroids(dt){
-            for (var i=0,len=asteroids.length; i<len; ++i){
-                var a = asteroids[i];
-                a.angle += a.speed * dt * Math.PI / 180 * a.dir;
-                a.x += a.vx*dt;
-                a.y += a.vy*dt;
-                a.vx += Math.random()*6-3;
-                a.vy += Math.random()*6-3;
-            }
-        }
-
-        function drawShip(){
-            ctx.save();
-            ctx.rotate(2*Math.sin((new Date)/800));
-            ctx.beginPath();
-            ctx.moveTo(0,-20);
-            ctx.lineTo(10,20);
-            ctx.lineTo(0,10);
-            ctx.lineTo(0,10);
-            ctx.lineTo(-10,20);
-            ctx.closePath();
-            ctx.fill();
-            ctx.restore();
-        }
-
-        setInterval(function(){
-            fpsout.innerHTML = fps.toFixed(1)+"fps";
-        },1000);
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 1280px; height: 720px; background: #231F20"></canvas>
+    <script src="Build/WebGLMap.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/WebGLMap.data",
+        frameworkUrl: "Build/WebGLMap.framework.js",
+        codeUrl: "Build/WebGLMap.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "MapWebGL",
+        productVersion: "1.0",
+      });
     </script>
   </body>
 </html>
