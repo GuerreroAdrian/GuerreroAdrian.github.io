@@ -45667,13 +45667,13 @@ return A.a7(q.DZ(0),$async$fU)
 case 2:p=q.PR$
 m=A
 s=3
-return A.a7(p.bB(0,"VibingVillage.png"),$async$fU)
+return A.a7(p.bB(0,"VibingVillage2x.png"),$async$fU)
 case 3:o=m.a44(c,null,null)
 s=4
-return A.a7(p.bB(0,"BeachBird.png"),$async$fU)
+return A.a7(p.bB(0,"BeachBirdMerge2x.png"),$async$fU)
 case 4:p=c
 n=new A.b8(new Float64Array(2))
-n.cA(16,16)
+n.cA(32,32)
 n=A.adI(new A.Si(p,n,A.r(t.S,t.kz)).JS(0,0,null),!0,0.2)
 A.dk(q.av,"birdAnimation")
 q.av=n
@@ -45703,7 +45703,7 @@ r.toString
 q=new A.b8(new Float64Array(2))
 q.cA(150,500)
 p=new A.b8(new Float64Array(2))
-p.cA(100,100)
+p.cA(32,32)
 s.Bc(r,q,p)
 o.e.ay(0)}}
 A.HI.prototype={
@@ -45713,9 +45713,9 @@ s=$.a7U().a
 r=s[0]
 s=s[1]
 q=new A.b8(new Float64Array(2))
-q.cA(r/2-958.333335,s/2-750)
+q.cA(r/2-1152,s/2-900)
 s=new A.b8(new Float64Array(2))
-s.cA(1916.66667,1500)
+s.cA(2304,1800)
 this.Q.Bc(p,q,s)}}
 A.C0.prototype={}
 A.xI.prototype={

@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "c59a13995471fd9f5d8818a106417bd2",
+  "assets/AssetManifest.json": "4ada71c1b003bfb7dd517a457fc41bd1",
 "assets/assets/images/BeachBird.png": "6914379395b08dee1767ca4915df0465",
-"assets/assets/images/BeachBird2x": "1af078d2e517bbd4eccac6a5a19669f0",
+"assets/assets/images/BeachBirdMerge2x.png": "1af078d2e517bbd4eccac6a5a19669f0",
 "assets/assets/images/VibingVillage.png": "92377fa9e358bd96801207a7e31a0564",
 "assets/assets/images/VibingVillage2x.png": "31461f26ac9e0902fbdf4ec884c3ed70",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
@@ -21,9 +21,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "fd603e22bad2417656c493bff2f8b29b",
-"/": "fd603e22bad2417656c493bff2f8b29b",
-"main.dart.js": "8bc602b2ba90d64825a4ecba59160d8f",
+"index.html": "ecfb24f20471342ff0846ac5bd11ec70",
+"/": "ecfb24f20471342ff0846ac5bd11ec70",
+"main.dart.js": "ba7dbef0d0cf51528cdf983be4baaee7",
 "manifest.json": "af59e685264f8dbf102f88d6f3cff0d9",
 "version.json": "48b5baadf72765bcf5f34ed94da81b4e"
 };
