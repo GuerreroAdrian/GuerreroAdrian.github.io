@@ -45703,7 +45703,7 @@ r.toString
 q=new A.b8(new Float64Array(2))
 q.cA(150,500)
 p=new A.b8(new Float64Array(2))
-p.cA(100,100)
+p.cA(16,16)
 s.Bc(r,q,p)
 o.e.ay(0)}}
 A.HI.prototype={
@@ -45713,9 +45713,9 @@ s=$.a7U().a
 r=s[0]
 s=s[1]
 q=new A.b8(new Float64Array(2))
-q.cA(r/2-958.333335,s/2-750)
+q.cA(r/2-575,s/2-450)
 s=new A.b8(new Float64Array(2))
-s.cA(1916.66667,1500)
+s.cA(1150,900)
 this.Q.Bc(p,q,s)}}
 A.C0.prototype={}
 A.xI.prototype={
