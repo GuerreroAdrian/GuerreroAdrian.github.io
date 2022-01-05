@@ -3,11 +3,15 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "4ada71c1b003bfb7dd517a457fc41bd1",
+  "assets/AssetManifest.json": "84568ed8ca3b1c8672474fab1ec409ac",
 "assets/assets/images/BeachBird.png": "6914379395b08dee1767ca4915df0465",
 "assets/assets/images/BeachBirdMerge2x.png": "1af078d2e517bbd4eccac6a5a19669f0",
+"assets/assets/images/chopper.png": "530485b0033f6debb146c0f2714126bb",
+"assets/assets/images/creature.png": "5e52950ac303c1b529e9005317459665",
+"assets/assets/images/FountainMerge2x.png": "dd19abbe33f82dcc7f69195698462452",
 "assets/assets/images/VibingVillage.png": "92377fa9e358bd96801207a7e31a0564",
 "assets/assets/images/VibingVillage2x.png": "31461f26ac9e0902fbdf4ec884c3ed70",
+"assets/assets/images/Vibing_Atlas.png": "4c4f4d9268866240bccdde28f8850077",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/NOTICES": "fbdeac3f3687b1307208b5e7c6a33f9e",
@@ -21,9 +25,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "8b7360d502acc04d779e4a82aec42e87",
-"/": "8b7360d502acc04d779e4a82aec42e87",
-"main.dart.js": "f6628c713f76a26e9f351eb0d8e62071",
+"index.html": "ad602c3cc086e86d4a86523adcd83a30",
+"/": "ad602c3cc086e86d4a86523adcd83a30",
+"main.dart.js": "b47cd14899ad9024a4b8878f4be028f6",
 "manifest.json": "af59e685264f8dbf102f88d6f3cff0d9",
 "version.json": "48b5baadf72765bcf5f34ed94da81b4e"
 };
