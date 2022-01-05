@@ -3,9 +3,10 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "d8650c7fbac3874618b6c0a700cf8653",
+  "assets/AssetManifest.json": "fc7cf89f669d8a2ad6d429936a604602",
 "assets/assets/images/B1.png": "e8a29a0e92f637fb20f58fbdb323ee3f",
 "assets/assets/images/B2.png": "f1e20ed3d475ef88f5cc9e2e1f0ef9b4",
+"assets/assets/images/B3.png": "8f932b072b43f193a6a257c3add1fe00",
 "assets/assets/images/BeachBird.png": "6914379395b08dee1767ca4915df0465",
 "assets/assets/images/BeachBirdMerge2x.png": "1af078d2e517bbd4eccac6a5a19669f0",
 "assets/assets/images/chopper.png": "530485b0033f6debb146c0f2714126bb",
@@ -27,9 +28,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "4bd3ab7dcc122000038ad4c87f1c8291",
-"/": "4bd3ab7dcc122000038ad4c87f1c8291",
-"main.dart.js": "054689cf8a15455d997b151dc2622681",
+"index.html": "2af0559da45679daf900d4c64f467888",
+"/": "2af0559da45679daf900d4c64f467888",
+"main.dart.js": "e611ce3856157ac9ddf89ea17d5d76b0",
 "manifest.json": "af59e685264f8dbf102f88d6f3cff0d9",
 "version.json": "48b5baadf72765bcf5f34ed94da81b4e"
 };
