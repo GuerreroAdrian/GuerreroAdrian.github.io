@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "fc7cf89f669d8a2ad6d429936a604602",
+  "assets/AssetManifest.json": "5199efb09c70d6191591740e7807ab56",
 "assets/assets/images/B1.png": "e8a29a0e92f637fb20f58fbdb323ee3f",
 "assets/assets/images/B2.png": "f1e20ed3d475ef88f5cc9e2e1f0ef9b4",
 "assets/assets/images/B3.png": "8f932b072b43f193a6a257c3add1fe00",
@@ -12,6 +12,7 @@ const RESOURCES = {
 "assets/assets/images/chopper.png": "530485b0033f6debb146c0f2714126bb",
 "assets/assets/images/creature.png": "5e52950ac303c1b529e9005317459665",
 "assets/assets/images/FountainMerge2x.png": "dd19abbe33f82dcc7f69195698462452",
+"assets/assets/images/Hammster_Sheet.png": "d7717f7047aabe8267079bf683a8dea4",
 "assets/assets/images/VibingVillage.png": "92377fa9e358bd96801207a7e31a0564",
 "assets/assets/images/VibingVillage2x.png": "31461f26ac9e0902fbdf4ec884c3ed70",
 "assets/assets/images/Vibing_Atlas.png": "4c4f4d9268866240bccdde28f8850077",
@@ -28,9 +29,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "9c618f3f120fcf6eef6c6bff2c92d8c0",
-"/": "9c618f3f120fcf6eef6c6bff2c92d8c0",
-"main.dart.js": "34d1449d57632375027c08af447ea025",
+"index.html": "9c34bdaebf068860d0356bbb4b7beb24",
+"/": "9c34bdaebf068860d0356bbb4b7beb24",
+"main.dart.js": "1b549772440ddfb1cda268910fe05d3a",
 "manifest.json": "af59e685264f8dbf102f88d6f3cff0d9",
 "version.json": "48b5baadf72765bcf5f34ed94da81b4e"
 };
