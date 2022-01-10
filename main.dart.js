@@ -51704,7 +51704,7 @@ r($,"api","a52",()=>{var q=t.t,p=t.G
 return A.b([A.b([A.jp(0,0),A.b([1,2],q)],p),A.b([A.jp(100,0),A.b([0,2],q)],p),A.b([A.jp(0,100),A.b([0,1],q)],p)],A.Q("q<r<t>>"))})
 r($,"apb","Jm",()=>{var q=t.G
 return A.b([A.b(["bank",A.jp(-216,-56)],q),A.b(["museum",A.jp(-215.76354679802955,-193.5960591133005)],q),A.b(["ferrisWheel",A.jp(289,43.5)],q),A.b(["bazaar",A.jp(84.60591133004925,-54)],q),A.b(["library",A.jp(16.625615763546797,-191)],q),A.b(["shrine",A.jp(241.6256157635468,-183.25123152709358)],q)],A.Q("q<r<t>>"))})
-r($,"apf","a51",()=>A.b([A.a3l(B.yq,B.fj,"https://twitter.com/MonkettesNFT"),A.a3l(B.y7,B.fj,"discord.gg/monkettes"),A.a3l(B.yy,B.xv,"https://magiceden.io/marketplace/solana_monkette_busines")],t.p))})();(function nativeSupport(){!function(){var s=function(a){var m={}
+r($,"apf","a51",()=>A.b([A.a3l(B.yq,B.fj,"https://twitter.com/MonkettesNFT"),A.a3l(B.y7,B.fj,"https://discord.com/invite/monkettes"),A.a3l(B.yy,B.xv,"https://magiceden.io/marketplace/solana_monkette_busines")],t.p))})();(function nativeSupport(){!function(){var s=function(a){var m={}
 m[a]=1
 return Object.keys(hunkHelpers.convertToFastObject(m))[0]}
 v.getIsolateTag=function(a){return s("___dart_"+a+v.isolateTag)}
