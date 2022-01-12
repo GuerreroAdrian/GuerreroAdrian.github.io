@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "990e0596bc8887f7a2e013804ef93569",
+  "assets/AssetManifest.json": "4368754f28369ae2e470e7aee0aa56b5",
 "assets/assets/images/baby_monkette.png": "ff89eb5a0650a2dd34ab1880fd231102",
 "assets/assets/images/BeachBird.png": "6914379395b08dee1767ca4915df0465",
 "assets/assets/images/Bhover.png": "3d81f6ac4e370462481f6532f57795b8",
@@ -47,7 +47,7 @@ const RESOURCES = {
 "assets/assets/images/VibingTownN.png": "8c016127eba774e1772eef3e60125c69",
 "assets/assets/images/WestHousesBird.png": "992c6a8bd560f1c7e2ce347965265fc6",
 "assets/assets/pagebuttons.fa": "28146eaedc8c212cfeefe3e3cda3e879",
-"assets/assets/vibingtown.fa": "3778f035b18153642ce5e89355195361",
+"assets/assets/vibeTown.fa": "3778f035b18153642ce5e89355195361",
 "assets/FontManifest.json": "4c3c6242e5ab7ab150aa79b29431ae35",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/fonts/small_pixel-7.ttf": "c941580153991e12cbb040d4b06b0434",
@@ -62,9 +62,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "2627aebb73857620fb896d477c5acaf5",
-"/": "2627aebb73857620fb896d477c5acaf5",
-"main.dart.js": "a6bf24db56a267635f79302b3b081e25",
+"index.html": "d35eb4594c8abb19d7554d40b4a032f2",
+"/": "d35eb4594c8abb19d7554d40b4a032f2",
+"main.dart.js": "5d864e0f75cd6d97926c8047001ab9e5",
 "manifest.json": "af59e685264f8dbf102f88d6f3cff0d9",
 "version.json": "48b5baadf72765bcf5f34ed94da81b4e"
 };
