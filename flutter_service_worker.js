@@ -48,7 +48,6 @@ const RESOURCES = {
 "assets/assets/images/VibingTownN.png": "e3c89fef98d1ce3228336d08026707c9",
 "assets/assets/images/WestHousesBird.png": "992c6a8bd560f1c7e2ce347965265fc6",
 "assets/assets/pagebuttons.fa": "28146eaedc8c212cfeefe3e3cda3e879",
-"assets/assets/vibeTown.fa": "3778f035b18153642ce5e89355195361",
 "assets/assets/vibingtown.fa": "6e3e291f9b7943360b65da25fa6e3b17",
 "assets/FontManifest.json": "4c3c6242e5ab7ab150aa79b29431ae35",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
@@ -64,9 +63,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "ac4c1b02b76c790d19ce05096dfca710",
-"/": "ac4c1b02b76c790d19ce05096dfca710",
-"main.dart.js": "93773abcd90d82a59d60090f195378dd",
+"index.html": "f4a0344c32cb5ecb50ca5aaa81b099fd",
+"/": "f4a0344c32cb5ecb50ca5aaa81b099fd",
+"main.dart.js": "9ded8519798cb6b48f1bb42cfeb254e7",
 "manifest.json": "af59e685264f8dbf102f88d6f3cff0d9",
 "version.json": "48b5baadf72765bcf5f34ed94da81b4e"
 };
