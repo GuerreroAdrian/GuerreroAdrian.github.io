@@ -37,6 +37,9 @@
 .topnav {
   overflow: hidden;
   background-color: #333;
+  width: 100%;
+  top: 0;
+  position: absolute;
 }
 
 .topnav a {
@@ -168,6 +171,13 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+
+    function AddId() {
+      const algo = document.querySelector("canvas");
+
+      algo.style.top = 50 + "px";
+    }
+    AddId();
   </script>
   <div class="topnav" id="myTopnav">
     <a href="#home"><div class="card"></div></a>
