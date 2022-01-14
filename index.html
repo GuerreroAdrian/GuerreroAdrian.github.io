@@ -5,6 +5,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,15 +14,13 @@
 
   <link rel="icon" type="image/png" href="favicon.png"/>
 
+  <title>vibingtownflutter</title>
   <link rel="manifest" href="manifest.json">
-
-  <title>Vibing Studios</title>
-    <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleNB.css">
 </head>
 <body>
   <script>
-    var serviceWorkerVersion = '2967035279';
+    var serviceWorkerVersion = '3752134831';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -35,11 +34,7 @@
     }
 
     if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
       window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
@@ -52,24 +47,16 @@
               });
             }
             if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
               waitForActivation(reg.installing || reg.waiting);
             } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
               console.log('New service worker available.');
               reg.update();
               waitForActivation(reg.installing);
             } else {
-              // Existing service worker is still good.
               console.log('Loading app from service worker.');
               loadMainDartJs();
             }
           });
-
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
         setTimeout(() => {
           if (!scriptLoaded) {
             console.warn(
@@ -80,22 +67,54 @@
         }, 4000);
       });
     } else {
-      // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
   </script>
-  <div class="progress">
-    <img class="main" src="images/LoadingImage.png">
-    <img class="progressBarBackground" src="images/LoadingBarBackground.png">
-    <div class="progressBar"></div>
-    <img class="progressBarOutline" src="images/LoadingBar.png">
-  </div>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
-      });
+  <nav class="navbar">
+    <div class="content">
+        <div class="logo">
+            <!-- <img src="Dunpressed.png"> --> 
+        </div>
+        <ul class="menu-list">
+            <div class="icon cancel-btn"><div id="Ba"></div></div>
+
+            <a href="#">Museum</a>
+            <a href="#">Library</a>
+            <a href="#">Shrine</a>
+            <a href="#">Bank</a>
+            <a href="#">Bazaar</a>
+            <a href="#">Carnival</a>
+            <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
+            <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
+            <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
+        </ul>
+        <div class="icon">
+            <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
+            <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
+            <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
+            <div id="B"></div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector("#B");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = () => {
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
     }
-  </script>
+    cancelBtn.onclick = () => {
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+    }
+    window.onscroll = () => {
+        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+</script>
 </body>
 </html>
