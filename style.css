@@ -11,7 +11,7 @@ body{
 }
 
 .main{
-  width: 960px;
+  width: 20%;
 }
 
 .progress {
@@ -23,8 +23,9 @@ body{
 }
 
 #text{
+  color: black;
   position: absolute;
-  font-size: 1000%;
+  font-size: 600%;
   top: 65%;
 }
 
