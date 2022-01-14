@@ -2,6 +2,10 @@ body{
     background-color: #ffffff;
   }
 
+  canvas {
+    background-color: #ffffff;
+  }
+
   .progress {
     position: fixed;
     align-items: center;
