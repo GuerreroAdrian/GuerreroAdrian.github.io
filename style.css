@@ -11,7 +11,7 @@ body{
 }
 
 .main{
-  width: 30rem;
+  width: 15rem;
 }
 
 .progress {
@@ -25,7 +25,7 @@ body{
 #loadingText{
   color: black;
   position: absolute;
-  font-size: 10rem;
+  font-size: 5rem;
   top: 65%;
 }
 
@@ -124,7 +124,8 @@ a {
 }
 
 .navbar {
-    background-color: #391f3c;
+    /*background-color: #391f3c;*/
+    background-color: orange;
     position: fixed;
     top: 0;
     left: 0;
@@ -188,6 +189,13 @@ a {
     .content {
         padding: 0 40px;
     }
+
+    #loadingText{
+        color: black;
+        position: absolute;
+        font-size: 3rem;
+        top: 65%;
+      }
 }
 @media (max-width: 900px) {
     .content {
@@ -203,12 +211,8 @@ a {
     #loadingText{
         color: black;
         position: absolute;
-        font-size: 5rem;
+        font-size: 1rem;
         top: 65%;
-      }
-
-      .main{
-        width: 15rem;
       }
 
     body.disabled{
