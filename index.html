@@ -12,15 +12,15 @@
   <meta name="apple-mobile-web-app-title" content="vibingtownflutter">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>vibingtownflutter</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="styleNB.css">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" src="images/icon.png">
+  <title>Vibing Studios</title>
 </head>
 <body>
   <script>
-    var serviceWorkerVersion = '3752134831';
+    var serviceWorkerVersion = '1224082733';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -57,6 +57,7 @@
               loadMainDartJs();
             }
           });
+
         setTimeout(() => {
           if (!scriptLoaded) {
             console.warn(
@@ -70,51 +71,81 @@
       loadMainDartJs();
     }
   </script>
-  <nav class="navbar">
-    <div class="content">
-        <div class="logo">
-            <!-- <img src="Dunpressed.png"> --> 
-        </div>
-        <ul class="menu-list">
-            <div class="icon cancel-btn"><div id="Ba"></div></div>
+          <div class="progress">
+            <img class="main" src="images/loading.gif">
+            <div id="text"></div>
+          </div>
+          <nav class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <!-- <img src="Dunpressed.png"> --> 
+                </div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn"><div id="Ba"></div></div>
 
-            <a href="#">Museum</a>
-            <a href="#">Library</a>
-            <a href="#">Shrine</a>
-            <a href="#">Bank</a>
-            <a href="#">Bazaar</a>
-            <a href="#">Carnival</a>
-            <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
-            <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
-            <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
-        </ul>
-        <div class="icon">
-            <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
-            <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
-            <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
-            <div id="B"></div>
-        </div>
-    </div>
-</nav>
+                    <a href="#">Museum</a>
+                    <a href="#">Library</a>
+                    <a href="#">Shrine</a>
+                    <a href="#">Bank</a>
+                    <a href="#">Bazaar</a>
+                    <a href="#">Carnival</a>
+                    <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
+                    <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
+                    <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
+                </ul>
+                <div class="icon">
+                    <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
+                    <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
+                    <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
+                    <div id="B"></div>
+                </div>
+            </div>
+        </nav>
 
-<script>
-    const body = document.querySelector("body");
-    const navbar = document.querySelector(".navbar");
-    const menuBtn = document.querySelector("#B");
-    const cancelBtn = document.querySelector(".cancel-btn");
-    menuBtn.onclick = () => {
-        navbar.classList.add("show");
-        menuBtn.classList.add("hide");
-        body.classList.add("disabled");
-    }
-    cancelBtn.onclick = () => {
-        body.classList.remove("disabled");
-        navbar.classList.remove("show");
-        menuBtn.classList.remove("hide");
-    }
-    window.onscroll = () => {
-        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-    }
-</script>
+        <script>
+            const body = document.querySelector("body");
+            const navbar = document.querySelector(".navbar");
+            const menuBtn = document.querySelector("#B");
+            const cancelBtn = document.querySelector(".cancel-btn");
+            menuBtn.onclick = () => {
+                navbar.classList.add("show");
+                menuBtn.classList.add("hide");
+                body.classList.add("disabled");
+            }
+            cancelBtn.onclick = () => {
+                body.classList.remove("disabled");
+                navbar.classList.remove("show");
+                menuBtn.classList.remove("hide");
+            }
+            window.onscroll = () => {
+                this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+            }
+
+            var loaded = false;
+            var texts = [ "Cooking up the website", "Waking up the frens", "Vibing while waiting", "Wen Website", "gmi..."];
+            document.getElementById("text").innerHTML = texts[Math.floor(Math.random() * texts.length)];
+            
+            function ChangeText()
+            {
+              let currentText = document.getElementById("text").innerHTML;
+              let currentIndex = texts.findIndex((e) => e == currentText.toString());
+              let newIndex = (currentIndex + 1) % texts.length;
+              document.getElementById("text").innerHTML = texts[newIndex];
+              setTimeout(() => {
+                if(!loaded)
+                  ChangeText();
+              }, 500);
+            }
+
+            setTimeout(() => {
+              ChangeText();
+            }, 500);
+
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function () {
+                //navigator.serviceWorker.register('flutter_service_worker.js');
+              });
+            }
+        </script>
 </body>
 </html>

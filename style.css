@@ -3,6 +3,31 @@
     src: url(fonts/small_pixel-7.ttf);
 }
 
+
+html,
+body{
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.main{
+  width: 960px;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
+
+#text{
+  position: absolute;
+  font-size: 1000%;
+  top: 65%;
+}
+
 * {
     font-family: Pixel;
 }
