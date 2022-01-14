@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="icon" src="images/icon.png">
-  <title>Vibing Studios</title>
+  <title>Vibing Town</title>
 </head>
 <body>
   <script>
@@ -73,7 +73,7 @@
   </script>
           <div class="progress">
             <img class="main" src="images/loading.gif">
-            <div id="text"></div>
+            <div id="loadingText"></div>
           </div>
           <nav class="navbar">
             <div class="content">
@@ -123,14 +123,14 @@
 
             var loaded = false;
             var texts = [ "Cooking up the website", "Waking up the frens", "Vibing while waiting", "Wen Website", "gmi..."];
-            document.getElementById("text").innerHTML = texts[Math.floor(Math.random() * texts.length)];
+            document.getElementById("loadingText").innerHTML = texts[Math.floor(Math.random() * texts.length)];
             
             function ChangeText()
             {
-              let currentText = document.getElementById("text").innerHTML;
+              let currentText = document.getElementById("loadingText").innerHTML;
               let currentIndex = texts.findIndex((e) => e == currentText.toString());
               let newIndex = (currentIndex + 1) % texts.length;
-              document.getElementById("text").innerHTML = texts[newIndex];
+              document.getElementById("loadingText").innerHTML = texts[newIndex];
               setTimeout(() => {
                 if(!loaded)
                   ChangeText();

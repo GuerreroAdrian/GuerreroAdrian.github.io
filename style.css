@@ -11,7 +11,7 @@ body{
 }
 
 .main{
-  width: 20%;
+  width: 10%;
 }
 
 .progress {
@@ -22,7 +22,7 @@ body{
 
 }
 
-#text{
+#loadingText{
   color: black;
   position: absolute;
   font-size: 600%;
