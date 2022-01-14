@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Pixel';
+    src: url(fonts/small_pixel-7.ttf);
+}
+
+
+html,
+body{
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.main{
+  width: 10%;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
+
+#loadingText{
+  color: black;
+  position: absolute;
+  font-size: 600%;
+  top: 65%;
+}
+
+* {
+    font-family: Pixel;
+}
+
+a {
+    text-decoration: none;
+}
+
+#D {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background: url("images/Dunpressed.png") no-repeat;
+    background-position: center;
+}
+
+#D:hover {
+    background: url("images/Dhover.png") no-repeat;
+}
+
+#D:active {
+    background: url("images/Dpressed.png") no-repeat;
+}
+
+#J {
+    width: 100px;
+    height: 45px;
+    display: inline-block;
+    background: url("images/Junpressed.png") no-repeat;
+    background-position: center;
+}
+
+#J:hover {
+    background: url("images/Jhover.png") no-repeat;
+}
+
+#J:active {
+    background: url("images/Jpressed.png") no-repeat;
+}
+
+#B {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    background: url("images/Bunpressed.png") no-repeat;
+    background-position: center;
+}
+
+#B:hover {
+    background: url("images/Bhover.png") no-repeat;
+}
+
+#B:active {
+    background: url("images/Bpressed.png") no-repeat;
+}
+
+#T {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background: url("images/Tunpressed.png") no-repeat;
+    background-position: center;
+}
+
+#T:hover {
+    background: url("images/Thover.png") no-repeat;
+}
+
+#T:active {
+    background: url("images/Tpressed.png") no-repeat;
+}
+
+#Ba {
+    width: 38px;
+    height: 28px;
+    display: inline-block;
+    background: url("images/Baunpressed.png") no-repeat;
+    background-position: center;
+}
+
+#Ba:hover {
+    background: url("images/Bahover.png") no-repeat;
+}
+
+#Ba:active {
+    background: url("images/Bapressed.png") no-repeat;
+}
+
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.navbar {
+    background-color: #391f3c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .menu-list {
+    margin: 0;
+    justify-content: center;
+    display: inline-flex;
+}
+
+.menu-list a {
+    color: #fff;
+    font-size: 30px;
+    padding: 0 10px;
+    
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.menu-list a:hover {
+    color: #c93737;
+}
+
+.icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-list .cancel-btn {
+    z-index: 3;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1230px) {
+    .content {
+        padding: 0 60px;
+    }
+}
+@media (max-width: 1100px) {
+    .content {
+        padding: 0 40px;
+    }
+}
+@media (max-width: 900px) {
+    .content {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 868px) {
+    .fas {
+        width: 10px;
+        height: 10px;
+    }
+
+    body.disabled{
+        overflow: hidden;
+      }
+      
+      .icon{
+        display: block;
+      }
+
+      .icon.hide{
+        display: none;
+      }
+
+      .navbar .menu-list{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: #98c4f2;
+        transition: all 0.3s ease;
+      }
+
+      .navbar.show .menu-list{
+        left: 0%;
+      }
+      
+      .navbar .menu-list a{
+        font-size: 30px;
+        margin-left: -100%;
+        padding: 10px 0;
+        display: block;
+        align-content: center;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      .navbar.show .menu-list a{
+        margin-left: 0px;
+      }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="vibingtownflutter">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" src="images/icon.png">
+  <title>Vibing Town</title>
+</head>
+<body>
+  <script>
+    var serviceWorkerVersion = '1224082733';
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              waitForActivation(reg.installing || reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              console.log('New service worker available.');
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
+
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      loadMainDartJs();
+    }
+  </script>
+          <div class="progress">
+            <img class="main" src="images/loading.gif">
+            <div id="loadingText"></div>
+          </div>
+          <nav class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <!-- <img src="Dunpressed.png"> --> 
+                </div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn"><div id="Ba"></div></div>
+
+                    <a href="#">Museum</a>
+                    <a href="#">Library</a>
+                    <a href="#">Shrine</a>
+                    <a href="#">Bank</a>
+                    <a href="#">Bazaar</a>
+                    <a href="#">Carnival</a>
+                    <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
+                    <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
+                    <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
+                </ul>
+                <div class="icon">
+                    <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
+                    <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
+                    <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
+                    <div id="B"></div>
+                </div>
+            </div>
+        </nav>
+
+        <script>
+            const body = document.querySelector("body");
+            const navbar = document.querySelector(".navbar");
+            const menuBtn = document.querySelector("#B");
+            const cancelBtn = document.querySelector(".cancel-btn");
+            menuBtn.onclick = () => {
+                navbar.classList.add("show");
+                menuBtn.classList.add("hide");
+                body.classList.add("disabled");
+            }
+            cancelBtn.onclick = () => {
+                body.classList.remove("disabled");
+                navbar.classList.remove("show");
+                menuBtn.classList.remove("hide");
+            }
+            window.onscroll = () => {
+                this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+            }
+
+            var loaded = false;
+            var texts = [ "Cooking up the website", "Waking up the frens", "Vibing while waiting", "Wen Website", "gmi..."];
+            document.getElementById("loadingText").innerHTML = texts[Math.floor(Math.random() * texts.length)];
+            
+            function ChangeText()
+            {
+              let currentText = document.getElementById("loadingText").innerHTML;
+              let currentIndex = texts.findIndex((e) => e == currentText.toString());
+              let newIndex = (currentIndex + 1) % texts.length;
+              document.getElementById("loadingText").innerHTML = texts[newIndex];
+              setTimeout(() => {
+                if(!loaded)
+                  ChangeText();
+              }, 500);
+            }
+
+            setTimeout(() => {
+              ChangeText();
+            }, 500);
+
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function () {
+                //navigator.serviceWorker.register('flutter_service_worker.js');
+              });
+            }
+        </script>
+</body>
+</html>
