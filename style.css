@@ -124,8 +124,7 @@ a {
 }
 
 .navbar {
-    /*background-color: #391f3c;*/
-    background-color: palegoldenrod;
+    background-color: #391f3c;
     position: fixed;
     top: 0;
     left: 0;
